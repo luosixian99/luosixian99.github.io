@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2021/10/10/deep%20learning/%E6%90%AD%E5%BB%BATensorflow/</loc>
+    
+    <lastmod>2021-10-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2021/10/09/%E4%BD%A0%E5%A5%BD%E5%95%8A/</loc>
     
     <lastmod>2021-10-09</lastmod>
@@ -11,7 +18,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-10-10</lastmod>
+    <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

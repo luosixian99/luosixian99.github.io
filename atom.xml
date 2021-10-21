@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-09T14:19:10.886Z</updated>
+  <updated>2021-10-21T06:40:22.004Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WIN10下搭建python下Tendorflow环境</title>
+    <link href="http://example.com/2021/10/10/deep%20learning/%E6%90%AD%E5%BB%BATensorflow/"/>
+    <id>http://example.com/2021/10/10/deep%20learning/%E6%90%AD%E5%BB%BATensorflow/</id>
+    <published>2021-10-10T14:44:38.000Z</published>
+    <updated>2021-10-21T06:40:22.004Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本文章是作者使用在win10环境下搭建的Tensorflow环境方法。</p><p>使用的Tensorflow版本为2.5</p><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1.安装anaconda3与搭建虚拟环境</p><p>2.使用pip下载Tensorflow</p><p>3.安装Pycharm并在其中搭建环境</p><p>4.可能出现的问题与解决方法</p><h3 id="1-安装anaconda3与搭建虚拟环境"><a href="#1-安装anaconda3与搭建虚拟环境" class="headerlink" title="1.安装anaconda3与搭建虚拟环境"></a>1.安装anaconda3与搭建虚拟环境</h3><p>.下载Anaconda3与安装</p><p>首先需要做的是下载anaconda3，可以用<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">清华镜像源</a>下载，</p><p>下载win-x64-5.3.2版本的anaconda3</p><p>然后安装，安装的选项全部勾上，建议装默认路径，也就是C盘。（为了避免可能出现的各种路径或者变量问题。）</p><p>.创建虚拟环境</p><p>装好了之后打开Anaconda Prompt</p><p>然后创建虚拟环境</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n TF2<span class="number">.5</span> python=<span class="number">3.8</span></span><br></pre></td></tr></table></figure><p>（中间跳出来的弹窗选择y。）</p><p>创建完毕之后打开虚拟环境</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate TF2<span class="number">.5</span></span><br></pre></td></tr></table></figure><h3 id="2-使用pip下载Tensorflow"><a href="#2-使用pip下载Tensorflow" class="headerlink" title="2.使用pip下载Tensorflow"></a>2.使用pip下载Tensorflow</h3><p>.安装cuda（安装cpu版本请跳过此步）</p><p>在虚拟环境下，安装cudatoolkit11.2</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install cudatoolkit=<span class="number">11.2</span> -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure><p>.安装cudnn（安装cpu版本请跳过此步）</p><p>在虚拟环境下，安装cudnn8.1</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install cudnn=<span class="number">8.1</span> -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure><p>.下载Tensorflow2.5</p><p>在虚拟环境下，安装Tensorflow2.5</p><p>gpu版本输入</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Tensorflow-gpu==<span class="number">2.5</span><span class="number">.0</span> -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure><p>cpu版本输入</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Tensorflow-cpu==<span class="number">2.5</span><span class="number">.0</span> -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure><h3 id="3-安装Pycharm并在其中配置环境"><a href="#3-安装Pycharm并在其中配置环境" class="headerlink" title="3.安装Pycharm并在其中配置环境"></a>3.安装Pycharm并在其中配置环境</h3><p>.安装Pycharm</p><p>直接在Pycharm官网下载社区版安装，安装时选项请全部勾选上。</p><p>.配置环境</p><p>pycharm中，新建项目——python解释器——先前配置的解释器——conda环境——解释器</p><p>路径为：C：\User\你的用户名\AppData\Local\conda\conda\envs\TF2.5\python.exe</p><p>配置完后新建项目。</p><p>至此，Tensorflow2.5安装完毕，在新建的项目中输入</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow</span><br></pre></td></tr></table></figure><p>未报错，则成功。</p><h3 id="4-可能出现的问题与解决的方法"><a href="#4-可能出现的问题与解决的方法" class="headerlink" title="4.可能出现的问题与解决的方法"></a>4.可能出现的问题与解决的方法</h3><p>1）创建虚拟环境过慢或卡死</p><p>百度搜索anaconda3的pip下载换源。</p><p>2）下载tensorflow或cuda和cudnn过慢</p><p>搜索pip下载换源</p><p>若有问题请致信邮箱<a href="mailto:&#x33;&#x30;&#51;&#49;&#57;&#49;&#x36;&#x30;&#x32;&#x35;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;">&#x33;&#x30;&#51;&#49;&#57;&#49;&#x36;&#x30;&#x32;&#x35;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;本文章是作者使用在win10环境下搭建的Tensorflow环境方法。&lt;/p&gt;
+&lt;p&gt;使用的Tensorflow版本为2.5&lt;/p&gt;
+&lt;h2</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>你好啊</title>
