@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-21T06:40:22.004Z</updated>
+  <updated>2022-07-12T13:05:20.209Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>代码规范（侵删）</title>
+    <link href="http://example.com/2022/07/12/l1/"/>
+    <id>http://example.com/2022/07/12/l1/</id>
+    <published>2022-07-11T16:00:00.000Z</published>
+    <updated>2022-07-12T13:05:20.209Z</updated>
+    
+    <content type="html"><![CDATA[<p>正文<br>前端代码规范:   <a href="https://max.book118.com/html/2019/0328/7150131120002015.shtm">https://max.book118.com/html/2019/0328/7150131120002015.shtm</a><br>C++代码规范:   <a href="https://max.book118.com/html/2020/1120/8077006051003017.shtm">https://max.book118.com/html/2020/1120/8077006051003017.shtm</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;正文&lt;br&gt;前端代码规范:   &lt;a href=&quot;https://max.book118.com/html/2019/0328/7150131120002015.shtm&quot;&gt;https://max.book118.com/html/2019/0328/71501311200</summary>
+      
+    
+    
+    
+    
+    <category term="前端、C++" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E3%80%81C/"/>
+    
+  </entry>
   
   <entry>
     <title>WIN10下搭建python下Tendorflow环境</title>
