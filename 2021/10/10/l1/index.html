@@ -1,199 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+  <head>
+    
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    
+<script>!function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("use-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()</script>
+    
 
-<link rel="stylesheet" href="/css/main.css">
+<meta charset="utf-8" >
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="介绍本文章是作者使用在win10环境下搭建的Tensorflow环境方法。 使用的Tensorflow版本为2.5 目录1.安装anaconda3与搭建虚拟环境 2.使用pip下载Tensorflow 3.安装Pycharm并在其中搭建环境 4.可能出现的问题与解决方法 1.安装anaconda3与搭建虚拟环境.下载Anaconda3与安装 首先需要做的是下载anaconda3，可以用清华镜像源下">
-<meta property="og:type" content="article">
+<title>WIN10下搭建python下Tendorflow环境</title>
+<meta name="keywords" content="WIN10下搭建python下Tendorflow环境, Hexo">
+<meta name="description" content="介绍本文章是作者使用在win10环境下搭建的Tensorflow环境方法。
+使用的Tensorflow版本为2.5
+目录1.安装anaconda3与搭建虚拟环境
+2.使用pip下载Tensorflow
+3.安装Pycharm并在其中搭建环境">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="WIN10下搭建python下Tendorflow环境">
-<meta property="og:url" content="http://example.com/2021/10/10/l1/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="介绍本文章是作者使用在win10环境下搭建的Tensorflow环境方法。 使用的Tensorflow版本为2.5 目录1.安装anaconda3与搭建虚拟环境 2.使用pip下载Tensorflow 3.安装Pycharm并在其中搭建环境 4.可能出现的问题与解决方法 1.安装anaconda3与搭建虚拟环境.下载Anaconda3与安装 首先需要做的是下载anaconda3，可以用清华镜像源下">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-10-10T14:44:38.000Z">
-<meta property="article:modified_time" content="2023-07-11T14:31:13.410Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="介绍本文章是作者使用在win10环境下搭建的Tensorflow环境方法。
+使用的Tensorflow版本为2.5
+目录1.安装anaconda3与搭建虚拟环境
+2.使用pip下载Tensorflow
+3.安装Pycharm并在其中搭建环境">
 
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style/main.css">
 
-<link rel="canonical" href="http://example.com/2021/10/10/l1/">
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div id="app" class="main">
 
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2021/10/10/l1/","path":"2021/10/10/l1/","title":"WIN10下搭建python下Tendorflow环境"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>WIN10下搭建python下Tendorflow环境 | Hexo</title>
-  
-
-
-
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+<div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="http://example.com">
+        <img class="avatar" src="/images/avatar.png" alt="logo" width="32px" height="32px">
+      </a>
+      <a href="http://example.com">
+        <h1 class="site-title">Hexo</h1>
+      </a>
     </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">Hexo</p>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    <div class="right">
+        <i class="icon menu-switch icon-menu-outline" ></i>
     </div>
   </div>
 </div>
 
+<div class="menu-container" style="height: 0;opacity: 0;">
+<nav class="menu-list">
+  
+    
+      <a href="/" class="menu purple-link">
+        首页
+      </a>
+    
+  
+    
+      <a href="/tags" class="menu purple-link">
+        标签
+      </a>
+    
+  
+    
+      <a href="/archives" class="menu purple-link">
+        归档
+      </a>
+    
+  
+    
+      <a href="/about" class="menu purple-link">
+        关于
+      </a>
+    
+  
+</nav>
+</div>
 
 
 
-
-
-
-</header>
+  <div class="content-container">
+    <div class="post-detail">
+      
+      <h2 class="post-title">WIN10下搭建python下Tendorflow环境</h2>
+      <div class="post-info post-detail-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-10-10</span>
         
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85anaconda3%E4%B8%8E%E6%90%AD%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">2.1.</span> <span class="nav-text">1.安装anaconda3与搭建虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8pip%E4%B8%8B%E8%BD%BDTensorflow"><span class="nav-number">2.2.</span> <span class="nav-text">2.使用pip下载Tensorflow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%85Pycharm%E5%B9%B6%E5%9C%A8%E5%85%B6%E4%B8%AD%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-number">2.3.</span> <span class="nav-text">3.安装Pycharm并在其中配置环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">2.4.</span> <span class="nav-text">4.可能出现的问题与解决的方法</span></a></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
       </div>
-  </nav>
-</div>
-
-        </div>
-      </div>
-    </div>
-
-    
-  </aside>
-
-
-    </div>
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/10/l1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="WIN10下搭建python下Tendorflow环境 | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          WIN10下搭建python下Tendorflow环境
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-10-10 22:44:38" itemprop="dateCreated datePublished" datetime="2021-10-10T22:44:38+08:00">2021-10-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-07-11 22:31:13" itemprop="dateModified" datetime="2023-07-11T22:31:13+08:00">2023-07-11</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本文章是作者使用在win10环境下搭建的Tensorflow环境方法。</p>
+      <div class="post-content-wrapper">
+        <div class="post-content">
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本文章是作者使用在win10环境下搭建的Tensorflow环境方法。</p>
 <p>使用的Tensorflow版本为2.5</p>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1.安装anaconda3与搭建虚拟环境</p>
 <p>2.使用pip下载Tensorflow</p>
@@ -256,87 +154,68 @@
 <p>搜索pip下载换源</p>
 <p>若有问题请致信邮箱<a href="mailto:&#51;&#48;&#51;&#x31;&#x39;&#49;&#x36;&#x30;&#50;&#x35;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;">&#51;&#48;&#51;&#x31;&#x39;&#49;&#x36;&#x30;&#50;&#x35;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;</a></p>
 
+        </div>
+        <div class="top-div">
+          <ol class="top-box"><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E4%BB%8B%E7%BB%8D"><span class="top-box-text">介绍</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E7%9B%AE%E5%BD%95"><span class="top-box-text">目录</span></a><ol class="top-box-child"><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#1-%E5%AE%89%E8%A3%85anaconda3%E4%B8%8E%E6%90%AD%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="top-box-text">1.安装anaconda3与搭建虚拟环境</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#2-%E4%BD%BF%E7%94%A8pip%E4%B8%8B%E8%BD%BDTensorflow"><span class="top-box-text">2.使用pip下载Tensorflow</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#3-%E5%AE%89%E8%A3%85Pycharm%E5%B9%B6%E5%9C%A8%E5%85%B6%E4%B8%AD%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="top-box-text">3.安装Pycharm并在其中配置环境</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#4-%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E7%9A%84%E6%96%B9%E6%B3%95"><span class="top-box-text">4.可能出现的问题与解决的方法</span></a></li></ol></li></ol>
+        </div>
+      </div>
     </div>
 
     
-    
-    
-
-    <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/2023/07/11/hello-world/" rel="next" title="Hello World">
-                  Hello World <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2023</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">John Doe</span>
-  </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a>
   </div>
 
+
+
+
+
+
+
+
+
+
+<footer>
+<div class="site-footer">
+  <div class="social-container">
+    
+      
+        <a aria-label="跳转至github" href="https://github.com/f-dong" target="_blank">
+          <i class="icon icon-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <a href="https://github.com/f-dong/hexo-theme-minimalism" target="_blank">Theme</a>
+  
+  
+  
+  
+  
+  
+</div>
+</footer>
+
+
+      </div>
     </div>
-  </footer>
+    
+<script id="hexo-configurations"> window.theme_config = {"image":{"lazyload_enable":true,"photo_zoom":"simple-lightbox"}}; window.is_post = true; </script>
 
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
-
-  
+<script src="/js/main.js"></script>
 
 
 
 
 
 
-  
-
-
-
-
-
-</body>
+  </body>
 </html>
+
